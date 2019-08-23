@@ -24,7 +24,7 @@ describe('FreeMentor product', () => {
       .post('/api/v1/auth/signUp')
       .send(user)
       .end((error, res) => {
-        res.body.status.should.be.equal(201);
+        res.status.should.be.equal(201);
       });
     done();
   });
@@ -45,8 +45,8 @@ describe('FreeMentor product', () => {
       .post('/api/v1/auth/signUp')
       .send(user)
       .end((error, res) => {
-        res.body.status.should.be.equal(400);
-        res.body.should.be.an('object');
+        res.status.should.be.equal(400);
+        res.should.be.an('object');
       });
     done();
   });
@@ -66,8 +66,8 @@ describe('FreeMentor product', () => {
       .post('/api/v1/auth/signUp')
       .send(user)
       .end((error, res) => {
-        res.body.status.should.be.equal(400);
-        res.body.should.be.an('object');
+        res.status.should.be.equal(400);
+        res.should.be.an('object');
       });
     done();
   });
